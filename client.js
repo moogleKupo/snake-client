@@ -13,6 +13,7 @@ function connect() {
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
     conn.write("Name: TLM");
+    // conn.write("Move: up"); // Commented out the "hard-coded" Move: up message
   });
 
   // Interpret incoming data as text
@@ -25,5 +26,9 @@ function connect() {
 
   return conn;
 }
+
+// Write the initial message to the server as soon as the connection is established
+const client = connect();
+client.write("Name: TLM");
 
 module.exports = { connect };

@@ -19,8 +19,15 @@ const setupInput = (conn) => {
       connection.write("Move: down");
     } else if (key === "d") {
       connection.write("Move: right");
-    }
-    // Handle other key inputs here if needed
+    } else if (key === "z") {
+      connection.write("Say: Slytherin!");
+    } else if (key === "x") {
+      connection.write("Say: Griffindor!");
+    } else if (key === "c") {
+      connection.write("Say: Hufflepuff!");
+    } else if (key === "v") {
+      connection.write("Say: Ravenclaw!");
+    } // Handle other key inputs here if needed
   };
 
   stdin.on("data", handleUserInput);

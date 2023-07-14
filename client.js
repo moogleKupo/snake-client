@@ -13,7 +13,6 @@ function connect() {
   conn.on("connect", () => {
     console.log("Successfully connected to game server");
     conn.write("Name: TLM");
-    // conn.write("Move: up"); // Commented out the "hard-coded" Move: up message
   });
 
   // Interpret incoming data as text
@@ -21,7 +20,7 @@ function connect() {
 
   // Handle incoming data
   conn.on("data", (data) => {
-    console.log("you ded cuz you idled", data);
+    console.log("Received data:", data);
   });
 
   return conn;

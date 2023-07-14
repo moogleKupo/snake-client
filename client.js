@@ -3,7 +3,7 @@ const net = require("net");
 console.log("Connecting ...");
 
 // Establishes a connection with the game server
-function connectServer() {
+function connect() {
   const conn = net.createConnection({
     host: "localhost",
     port: 50541,
@@ -14,14 +14,10 @@ function connectServer() {
 
   // Handle incoming data
   conn.on("data", (data) => {
-    if (data === "you ded cuz you idled\n") {
-      console.log("You were kicked out for idling!");
-    } else {
-      console.log("Received data:", data);
-    }
+    console.log("you ded cuz you idled", data);
   });
 
   return conn;
 }
 
-module.exports = { connect: connectServer };
+module.exports = { connect };

@@ -9,6 +9,12 @@ function connect() {
     port: 50541,
   });
 
+  // Event handler for successful connection
+  conn.on("connect", () => {
+    console.log("Successfully connected to game server");
+    conn.write("Name: TLM");
+  });
+
   // Interpret incoming data as text
   conn.setEncoding("utf8");
 

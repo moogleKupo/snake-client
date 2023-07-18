@@ -6,8 +6,8 @@ console.log("Connecting ...");
 // Establishes a connection with the game server
 function connect() {
   const conn = net.createConnection({
-    host: "localhost",
-    port: 50541,
+    IP: "localhost",
+    PORT: 50541,
   });
 
   // Event handler for successful connection
@@ -28,7 +28,5 @@ function connect() {
 }
 
 // Write the initial message to the server as soon as the connection is established
-const client = connect();
-client.write("Name: TLM");
 
 module.exports = { connect };

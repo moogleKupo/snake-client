@@ -39,8 +39,9 @@ Have fun!!
 
 ## Final Product
 
-!["Upon Connection"](.docs/screenshot1.png)
-!["In Game Action!"](.docs/screenshot2.png)
+!["Upon Connection"](./docs/sceenshot1.png)
+!["In Game Action!"](./docs/screenshot2.png)
+
 
 
 ## Getting Started

@@ -6,8 +6,8 @@ console.log("Connecting ...");
 // Establishes a connection with the game server
 function connect() {
   const conn = net.createConnection({
-    IP: "localhost",
-    PORT: 50541,
+    host: IP,
+    port: PORT,
   });
 
   // Event handler for successful connection
